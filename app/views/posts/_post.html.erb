@@ -1,0 +1,49 @@
+  <div class="col py-2 text-center">
+    <div class="card">
+      <div class="card-body">
+      <div id="<%= dom_id post %>">
+  <p class="container">
+    <%= image_tag post.image, class:"w-100"  %>
+  </p>
+
+  <p>
+    <strong>Título:</strong>
+    <%= post.title %>
+  </p>
+
+  <p>
+    <strong>Descripción:</strong>
+    <%= post.description %>
+  </p>
+
+   <p>
+    <strong>Usuario:</strong>
+    <%= post.user.email %>
+  </p>
+
+  <p>
+    <strong>Post:</strong>
+    <%= post.id %>
+  </p>
+
+    <p>
+    <strong>Usuario:</strong>
+    <%= post.user.id %>
+  </p>
+
+<h4>Comentarios</h4>
+
+  <p>
+  <strong>Comentario:</strong>
+  <% post.comments.each do |comment| %>
+    <%= comment.content %>
+    <% end %>
+   </p>
+</div>
+
+
+      </div>
+    </div>
+  </div>
+
+

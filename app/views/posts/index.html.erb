@@ -1,0 +1,28 @@
+<p style="color: green"><%= notice %></p>
+
+  <div class="row">
+    <div class="col-3">
+      
+    </div>
+
+    <div class="col-6 text-center">
+<h1 class="text-danger">Posts</h1>
+
+<div id="posts">
+  <% @posts.each do |post| %>
+    <%= render post %>
+    <p>
+      <%= link_to "Mostrar Post", post, class:"btn btn-danger" %>
+    </p>
+  <% end %>
+</div>
+
+<%= link_to "Nuevo Post", new_post_path, class:"btn btn-danger" %>
+</div>
+    </div>
+
+    <div class="col-3">
+      
+    </div>
+  </div>
+

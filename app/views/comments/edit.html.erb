@@ -1,0 +1,10 @@
+<h1>Editar comentario</h1>
+
+<%= render "form", comment: @comment %>
+
+<br>
+
+<div>
+  <%= link_to "mostrar comentario", @comment, class:"btn btn-danger" %> |
+  <%= link_to "volver a comentarios", comments_path, class:"btn btn-danger" %>
+</div>

@@ -1,0 +1,20 @@
+<p style="color: green"><%= notice %></p>
+
+<%= render @post %>
+
+
+
+<div>
+  <%= link_to "Editar post", edit_post_path(@post), class:"btn btn-danger"  %> |
+  <%= link_to "Volver a posts", posts_path, class:"btn btn-danger"  %>
+
+
+<div>
+ 
+ <% if user_signed_in? %>
+ <% if current_user.id == @post.user_id %>
+ <%= link_to "Editar post", edit_post_path(@post) %> |
+ <%= button_to "Borrar post", @post, method: :delete %>
+ <% end %>
+ <% end %>
+</div>
